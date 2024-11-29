@@ -1,20 +1,24 @@
 getgenv().Config = {
     ["Farming"] = {
         ["AutoEvents"] = {"Mini Pinata"},
-        ["AutoOpen"] = {"Gift Bag", "Large Gift Bag", "Mini Chest", "Diamond Gift Bag"},
         ["AutoPotions"] = {"Diamonds", "Damage", "Walkspeed", "Treasure Hunter"},
         ["AutoFlags"] = {"Fortune Flag"}
     },
     ["Webhook"] = {
-        ["HugeURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
-        ["StatsURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
-        ["UserID"] = "988687572668645457",
-        ["SendEvery"] = 10
+        ["HugeURL"] = "",
+        ["StatsURL"] = "",
+        ["UserID"] = "",
+        ["SendEvery"] = 1
     },
     ["Misc"] = {
         ["AutoDaycare"] = true,
-        ["UltraFPS"] = true,
+        ["UltraFPS"] = false,
         ["AutoBuyAllSlots"] = true,
+    },
+    ["Elemental"] = {
+        ["AutoBuyCubes"] = {"Ultra Pet Cube"},
+        ["AutoTrainerQuests"] = false,
+        ["AutoFarmChest"] = false,
     },
     ["AutoMailUser"] = ""
 }
