@@ -1,9 +1,27 @@
-script_key="OoKaTIwyMqPAESQmdNFSJCrxOdMbPEwe";
-getgenv().LoadSettings = [[{"Inventory":{"Potions":{"Potion":["The Cocktail","Walkspeed","Diamonds","Damage","Treasure Hunter"],"UseMaxLevel":true,"Use":true},"RandomEvents":{"Event":"Mini Pinata","Use":true},"GiftBags":{"Gifts":[],"OpenSingle":false,"Use":false},"Flags":{"Flag":"Fortune Flag","Use":true},"Spawnables":{"Item":"Breakable Sprinkler","Use":true},"Buffs":{"Use":true,"Buffs":["Squeaky Toy","Lucky Dice III","Toy Ball","Lucky Dice II","Toy Bone","Lucky Dice"]},"Fruits":{"Use":true,"Fruit":["Watermelon","Candycane","Apple","Rainbow","Pineapple","Orange","Banana"]},"Lootbox":{"Use":false,"Lootbox":"None"}},"Farming":{"Zone":"0 - Best Unlocked","DinoTycoonAutoHuge":false,"MovementMode":"Teleporting","PetsPerBreakable":6,"Flags":{"Flag":"Shiny Flag","Use":false},"DinoTycoonAutoBuy":false,"UseTNT":false,"Start":true,"DinoTycoonAutoChests":false,"ZoneMovement":false,"Ultimate":true},"UIScale":1,"Optimization":{"SkipSpin":true,"HatchAnim":true,"Startup":{"Instance":"","autoJoin":false,"BreakTime":5},"Drops":true,"Breakables":false,"Wheels":true,"Merchants":true,"Machines":true,"Pets":true,"PetSpeed":true,"Items":true,"Scripts":false,"Confetti":true,"Teleports":true,"Rendering":false,"World":true},"Machines":{"Golden":false,"Rainbow":false,"Method":"All Available Pets","Fuse":false},"World":{"Instances":{"FlowerGarden":{"Use":false,"Seed":"None"},"Millionaire":{"Run":false,"MaxPercent":80,"MaxRoom":20}},"AutoWorld":false,"CollectRelics":false,"BuyUpgrades":false},"LoadSettings":true,"Hatching":{"Egg":"0 - Best Unlocked","MailUser ":"Enter your Username.","Webhook":"Enter your Webhook Url.","Amount":0,"Start":true,"HugeNotif":false,"MailStart":false}}]] -- Replace 'nil' with Copied Settings if you want to import to other devices
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/23521cea1cff5c0e428954401f395af3.lua"))()
+getgenv().Config = {
+    ["Farming"] = {
+        ["AutoEvents"] = {"Mini Pinata"},
+        ["AutoOpen"] = {"Gift Bag", "Large Gift Bag", "Mini Chest", "Diamond Gift Bag"},
+        ["AutoPotions"] = {"Diamonds", "Damage", "Walkspeed", "Treasure Hunter"},
+        ["AutoFlags"] = {"Fortune Flag"}
+    },
+    ["Webhook"] = {
+        ["HugeURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
+        ["StatsURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
+        ["UserID"] = "988687572668645457",
+        ["SendEvery"] = 10
+    },
+    ["Misc"] = {
+        ["AutoDaycare"] = true,
+        ["UltraFPS"] = true,
+        ["AutoBuyAllSlots"] = true,
+    },
+    ["AutoMailUser"] = ""
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2bdebaf848a6be382ed338dad329aaf2.lua"))()
 
 -- Wait for 20 seconds after the player joins
-wait(20)
+wait(60)
 
 -- Ensure the LocalPlayer and Character are available
 local player = game.Players.LocalPlayer
