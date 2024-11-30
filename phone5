@@ -7,7 +7,7 @@ getgenv().Config = {
     ["Webhook"] = {
         ["HugeURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
         ["StatsURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
-        ["UserID"] = "988687572668645457",
+        ["User ID"] = "988687572668645457",
         ["SendEvery"] = 1
     },
     ["Misc"] = {
@@ -20,11 +20,12 @@ getgenv().Config = {
         ["AutoTrainerQuests"] = false,
         ["AutoFarmChest"] = false,
     },
-    ["AutoMailUser"] = ""
+    ["AutoMailUser "] = ""
 }
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2bdebaf848a6be382ed338dad329aaf2.lua"))()
 
--- Wait for 20 seconds after the player joins
+-- Wait for 60 seconds after the player joins
 wait(60)
 
 -- Ensure the LocalPlayer and Character are available
@@ -33,4 +34,15 @@ local player = game.Players.LocalPlayer
 if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
     -- Set the CFrame of the HumanoidRootPart
     player.Character.HumanoidRootPart.CFrame = CFrame.new(6980.53369, 416.241425, -20596.0332, -0.826375067, -1.17252284e-07, 0.563120127, -8.21544859e-08, 1, 8.76577957e-08, -0.563120127, 2.61753765e-08, -0.826375067)
+
+    -- Hype Egg logic
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+    local HypeEventCmd = require(ReplicatedStorage.Library.Client.HypeEventCmds")
+    
+    if HypeEventCmd.IsActive() then
+        if not HypeEventCmd.IsCompleted() then
+            task.wait(HypeEventCmd.GetTimeRemaining())
+        end
+        ReplicatedStorage.Network["Hype Wheel: Claim"]:InvokeServer()
+    end
 end
