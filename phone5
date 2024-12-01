@@ -1,24 +1,5 @@
-getgenv().Config = {
-    ["Farming"] = {
-        ["AutoPotions"] = {"Diamonds", "Damage", "Walkspeed", "Treasure Hunter"},
-        ["AutoFlags"] = {"Fortune Flag"}
-    },
-    ["Webhook"] = {
-        ["HugeURL"] = "",
-        ["StatsURL"] = "",
-        ["UserID"] = "",
-        ["SendEvery"] = 1
-    },
-    ["Misc"] = {
-        ["AutoDaycare"] = true,
-        ["UltraFPS"] = true,
-        ["AutoBuyAllSlots"] = true,
-    },
-    ["Elemental"] = {
-        ["AutoBuyCubes"] = {"Ultra Pet Cube"},
-        ["AutoTrainerQuests"] = false,
-        ["AutoFarmChest"] = false,
-    },
-    ["AutoMailUser"] = ""
+getgenv().AuthKey = "HUGE_3C4qcDEzpSth"
+getgenv().LoadSettings = {
+    loadConfig = "pookie" -- Will not load unless the Config Exists
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2bdebaf848a6be382ed338dad329aaf2.lua"))()
+loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
