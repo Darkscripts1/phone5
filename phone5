@@ -1,5 +1,24 @@
-getgenv().AuthKey = "HUGE_3C4qcDEzpSth"
-getgenv().LoadSettings = {
-    loadConfig = "pookie" -- Will not load unless the Config Exists
+getgenv().Config = {
+    ["Farming"] = {
+        ["AutoPotions"] = {"Diamonds", "Damage", "Walkspeed", "Treasure Hunter"},
+        ["AutoFlags"] = {"Fortune Flag"}
+    },
+    ["Webhook"] = {
+        ["HugeURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
+        ["StatsURL"] = "https://discord.com/api/webhooks/1312062550581710949/_jfu58JKYxIQuzI4xcaNl3Oxu-vaJTH9BjtFP7rN8kGM5i_tsak32T8t1maRDpramcZp",
+        ["UserID"] = "988687572668645457",
+        ["SendEvery"] = 5
+    },
+    ["Misc"] = {
+        ["AutoDaycare"] = true,
+        ["UltraFPS"] = true,
+        ["AutoBuyAllSlots"] = true,
+    },
+    ["Elemental"] = {
+        ["AutoBuyCubes"] = {"Ultra Pet Cube"},
+        ["AutoTrainerQuests"] = false,
+        ["AutoFarmChest"] = false,
+    },
+    ["AutoMailUser"] = ""
 }
-loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2bdebaf848a6be382ed338dad329aaf2.lua"))()
